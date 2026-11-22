@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F6D9CDEC04AB7CFF3505CEB /* best.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = B4114E6B72D6131B24902625 /* best.mlpackage */; };
+		12DA8DE449F10E8CC12BAA2C /* RenderAlignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E43D3D945C0BD89702E481 /* RenderAlignmentTests.swift */; };
+		22E1BECC088620BD98703CB0 /* RouteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06FB0E0596EB6A64A4454B1 /* RouteCard.swift */; };
+		28D407C96AE1819B242E5EE9 /* HoldDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0591E42C543FE76854435 /* HoldDetector.swift */; };
+		3B28ECDB70D08657D6ADCEF3 /* RouteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C70BF2DFDF5AC0FB67110B /* RouteDetailView.swift */; };
+		60AEC2660ED7D473B84BA92B /* wall1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B434ACD72E22C0ECD67F9D69 /* wall1.jpg */; };
+		6B59AFDF8E1A64E4B59DDAB8 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8AC8A0935028A3832A4748 /* Entities.swift */; };
+		769D3347E5DBD4BB7E676FCD /* wall2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 110A750DE51A4BCC843EC1C8 /* wall2.jpg */; };
+		76BACB964BD912066832458C /* RouteEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADFD389EA463950D2C678B3 /* RouteEditView.swift */; };
+		9971C0B5A5681B8AA14552B6 /* CoreParityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C4048D0425363E0458313 /* CoreParityTests.swift */; };
+		9AC60E347E9331655D1EB0FD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC2C0109AFD97BEED5B2AE1 /* Theme.swift */; };
+		C7AF054F3B74E10E676ACD03 /* DetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E49394B3945CFFC02541B6 /* DetectorTests.swift */; };
+		CEC37DF4F31A9ACEBE7FDBFC /* wallR.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64989D3202DD3E97C356B6F4 /* wallR.jpg */; };
+		D2042793D64339F6EEA831AD /* LAB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3143A214BDD870F813A5E7A8 /* LAB.swift */; };
+		D5FB026DAB1AF54DCCEE2FC6 /* PhotoEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6052B50FF2643526E035998 /* PhotoEditorView.swift */; };
+		D770790A525C2A1DBC8965F5 /* wall3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 05DBE61EC22771002D011E62 /* wall3.jpg */; };
+		DDC0E501CA30DC6B76A42B3C /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84109C63ED50B2492699676E /* AlbumDetailView.swift */; };
+		F2BFD4D31F1306965D308331 /* RouteSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4370338CF632FEC2AA8EC327 /* RouteSession.swift */; };
+		FA09A9DC362683A7E9C1329B /* DemoSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0DB7211132201AFB0069A7 /* DemoSeed.swift */; };
+		FBCD856C03E18C4841753E05 /* BoulderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D43FD1023FB825D1C2CD35F /* BoulderApp.swift */; };
+		FFA1D03DD732283F85057956 /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DC7E9A2CBDC6B4C8AA3017 /* AlbumsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CF63797C50D45E386500A86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E33D5E302E6B6116D072FE11 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6106314FA50D86578A67BD0B;
+			remoteInfo = BoulderBook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05DBE61EC22771002D011E62 /* wall3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wall3.jpg; sourceTree = "<group>"; };
+		0A2C11403BE8D9240A12DF0E /* BoulderBookTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = BoulderBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		110A750DE51A4BCC843EC1C8 /* wall2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wall2.jpg; sourceTree = "<group>"; };
+		1FC2C0109AFD97BEED5B2AE1 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		3143A214BDD870F813A5E7A8 /* LAB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAB.swift; sourceTree = "<group>"; };
+		4370338CF632FEC2AA8EC327 /* RouteSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteSession.swift; sourceTree = "<group>"; };
+		49DC7E9A2CBDC6B4C8AA3017 /* AlbumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsView.swift; sourceTree = "<group>"; };
+		4AD0591E42C543FE76854435 /* HoldDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldDetector.swift; sourceTree = "<group>"; };
+		64989D3202DD3E97C356B6F4 /* wallR.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallR.jpg; sourceTree = "<group>"; };
+		69E49394B3945CFFC02541B6 /* DetectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectorTests.swift; sourceTree = "<group>"; };
+		6D43FD1023FB825D1C2CD35F /* BoulderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoulderApp.swift; sourceTree = "<group>"; };
+		76E43D3D945C0BD89702E481 /* RenderAlignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderAlignmentTests.swift; sourceTree = "<group>"; };
+		7B8AC8A0935028A3832A4748 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
+		84109C63ED50B2492699676E /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
+		8ADFD389EA463950D2C678B3 /* RouteEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteEditView.swift; sourceTree = "<group>"; };
+		A4C70BF2DFDF5AC0FB67110B /* RouteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailView.swift; sourceTree = "<group>"; };
+		B4114E6B72D6131B24902625 /* best.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = best.mlpackage; sourceTree = "<group>"; };
+		B434ACD72E22C0ECD67F9D69 /* wall1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wall1.jpg; sourceTree = "<group>"; };
+		C00C4048D0425363E0458313 /* CoreParityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreParityTests.swift; sourceTree = "<group>"; };
+		D6052B50FF2643526E035998 /* PhotoEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditorView.swift; sourceTree = "<group>"; };
+		E06FB0E0596EB6A64A4454B1 /* RouteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCard.swift; sourceTree = "<group>"; };
+		F19C6730929890A355A08DE9 /* BoulderBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoulderBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69DE8C21C687604DC5C1A4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FB0DB7211132201AFB0069A7 /* DemoSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSeed.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1A379FE97632D47EC1FCB6B1 /* BoulderBook */ = {
+			isa = PBXGroup;
+			children = (
+				F69DE8C21C687604DC5C1A4A /* Info.plist */,
+				343C343A81C5D126AD297265 /* App */,
+				F60CA778F3FBFE791D6EC3CD /* Demo */,
+				F113F5CDF8BF69FE3207D060 /* ML */,
+				EA9F6EE0F626EBC5EB10CAEF /* Model */,
+				C0E7E01D0ABEBEC13CE4EF05 /* UI */,
+			);
+			path = BoulderBook;
+			sourceTree = "<group>";
+		};
+		343C343A81C5D126AD297265 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6D43FD1023FB825D1C2CD35F /* BoulderApp.swift */,
+				FB0DB7211132201AFB0069A7 /* DemoSeed.swift */,
+				1FC2C0109AFD97BEED5B2AE1 /* Theme.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8E369C2F7E0D69A52AD6EA15 /* BoulderBookTests */ = {
+			isa = PBXGroup;
+			children = (
+				C00C4048D0425363E0458313 /* CoreParityTests.swift */,
+				69E49394B3945CFFC02541B6 /* DetectorTests.swift */,
+				76E43D3D945C0BD89702E481 /* RenderAlignmentTests.swift */,
+			);
+			path = BoulderBookTests;
+			sourceTree = "<group>";
+		};
+		C0E7E01D0ABEBEC13CE4EF05 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				84109C63ED50B2492699676E /* AlbumDetailView.swift */,
+				49DC7E9A2CBDC6B4C8AA3017 /* AlbumsView.swift */,
+				D6052B50FF2643526E035998 /* PhotoEditorView.swift */,
+				E06FB0E0596EB6A64A4454B1 /* RouteCard.swift */,
+				A4C70BF2DFDF5AC0FB67110B /* RouteDetailView.swift */,
+				8ADFD389EA463950D2C678B3 /* RouteEditView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C298AC2AB8C481995398F23C = {
+			isa = PBXGroup;
+			children = (
+				1A379FE97632D47EC1FCB6B1 /* BoulderBook */,
+				8E369C2F7E0D69A52AD6EA15 /* BoulderBookTests */,
+				D8E41C337C9A1C3C53934442 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8E41C337C9A1C3C53934442 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F19C6730929890A355A08DE9 /* BoulderBook.app */,
+				0A2C11403BE8D9240A12DF0E /* BoulderBookTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA9F6EE0F626EBC5EB10CAEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B8AC8A0935028A3832A4748 /* Entities.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F113F5CDF8BF69FE3207D060 /* ML */ = {
+			isa = PBXGroup;
+			children = (
+				B4114E6B72D6131B24902625 /* best.mlpackage */,
+				4AD0591E42C543FE76854435 /* HoldDetector.swift */,
+				3143A214BDD870F813A5E7A8 /* LAB.swift */,
+				4370338CF632FEC2AA8EC327 /* RouteSession.swift */,
+			);
+			path = ML;
+			sourceTree = "<group>";
+		};
+		F60CA778F3FBFE791D6EC3CD /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				B434ACD72E22C0ECD67F9D69 /* wall1.jpg */,
+				110A750DE51A4BCC843EC1C8 /* wall2.jpg */,
+				05DBE61EC22771002D011E62 /* wall3.jpg */,
+				64989D3202DD3E97C356B6F4 /* wallR.jpg */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6106314FA50D86578A67BD0B /* BoulderBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CB8662B6440E87205E65AF3 /* Build configuration list for PBXNativeTarget "BoulderBook" */;
+			buildPhases = (
+				CD5D598245B4AAE3890680B2 /* Sources */,
+				8C2DE66FA558D6CA8D689642 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BoulderBook;
+			packageProductDependencies = (
+			);
+			productName = BoulderBook;
+			productReference = F19C6730929890A355A08DE9 /* BoulderBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		62112763AF1FBA9FF7F859C1 /* BoulderBookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB4C788385585ABF878EADED /* Build configuration list for PBXNativeTarget "BoulderBookTests" */;
+			buildPhases = (
+				A58A59DD9098F3D738D6BBBF /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF8CB3651AB5B5C735601B41 /* PBXTargetDependency */,
+			);
+			name = BoulderBookTests;
+			packageProductDependencies = (
+			);
+			productName = BoulderBookTests;
+			productReference = 0A2C11403BE8D9240A12DF0E /* BoulderBookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E33D5E302E6B6116D072FE11 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 0F535C36093B7E3E7CE07097 /* Build configuration list for PBXProject "BoulderBook" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = C298AC2AB8C481995398F23C;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D8E41C337C9A1C3C53934442 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6106314FA50D86578A67BD0B /* BoulderBook */,
+				62112763AF1FBA9FF7F859C1 /* BoulderBookTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C2DE66FA558D6CA8D689642 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60AEC2660ED7D473B84BA92B /* wall1.jpg in Resources */,
+				769D3347E5DBD4BB7E676FCD /* wall2.jpg in Resources */,
+				D770790A525C2A1DBC8965F5 /* wall3.jpg in Resources */,
+				CEC37DF4F31A9ACEBE7FDBFC /* wallR.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A58A59DD9098F3D738D6BBBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9971C0B5A5681B8AA14552B6 /* CoreParityTests.swift in Sources */,
+				C7AF054F3B74E10E676ACD03 /* DetectorTests.swift in Sources */,
+				12DA8DE449F10E8CC12BAA2C /* RenderAlignmentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD5D598245B4AAE3890680B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDC0E501CA30DC6B76A42B3C /* AlbumDetailView.swift in Sources */,
+				FFA1D03DD732283F85057956 /* AlbumsView.swift in Sources */,
+				FBCD856C03E18C4841753E05 /* BoulderApp.swift in Sources */,
+				FA09A9DC362683A7E9C1329B /* DemoSeed.swift in Sources */,
+				6B59AFDF8E1A64E4B59DDAB8 /* Entities.swift in Sources */,
+				28D407C96AE1819B242E5EE9 /* HoldDetector.swift in Sources */,
+				D2042793D64339F6EEA831AD /* LAB.swift in Sources */,
+				D5FB026DAB1AF54DCCEE2FC6 /* PhotoEditorView.swift in Sources */,
+				22E1BECC088620BD98703CB0 /* RouteCard.swift in Sources */,
+				3B28ECDB70D08657D6ADCEF3 /* RouteDetailView.swift in Sources */,
+				76BACB964BD912066832458C /* RouteEditView.swift in Sources */,
+				F2BFD4D31F1306965D308331 /* RouteSession.swift in Sources */,
+				9AC60E347E9331655D1EB0FD /* Theme.swift in Sources */,
+				0F6D9CDEC04AB7CFF3505CEB /* best.mlpackage in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF8CB3651AB5B5C735601B41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6106314FA50D86578A67BD0B /* BoulderBook */;
+			targetProxy = 3CF63797C50D45E386500A86 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		057BE504B257D6D754E7BD24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9BMFNNSB6J;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = BoulderBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.boulderbook.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		10147D915827288E8DB630EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		5A6CAC8E1C853D696B3D909C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9BMFNNSB6J;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = BoulderBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.boulderbook.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B3B7DCEA409D54BDE1DAF0F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E5F11DD1D34EEC69086BD0D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.boulderbook.BoulderBookTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoulderBook.app/BoulderBook";
+			};
+			name = Release;
+		};
+		F939591A43D6FC03FBE48312 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.boulderbook.BoulderBookTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoulderBook.app/BoulderBook";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F535C36093B7E3E7CE07097 /* Build configuration list for PBXProject "BoulderBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3B7DCEA409D54BDE1DAF0F7 /* Debug */,
+				10147D915827288E8DB630EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4CB8662B6440E87205E65AF3 /* Build configuration list for PBXNativeTarget "BoulderBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A6CAC8E1C853D696B3D909C /* Debug */,
+				057BE504B257D6D754E7BD24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DB4C788385585ABF878EADED /* Build configuration list for PBXNativeTarget "BoulderBookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F939591A43D6FC03FBE48312 /* Debug */,
+				E5F11DD1D34EEC69086BD0D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E33D5E302E6B6116D072FE11 /* Project object */;
+}

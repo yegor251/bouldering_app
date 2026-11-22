@@ -1,0 +1,52 @@
+name: BoulderBook
+options:
+  bundleIdPrefix: ru.boulderbook
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.10"
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+    TARGETED_DEVICE_FAMILY: "1"
+targets:
+  BoulderBook:
+    type: application
+    platform: iOS
+    sources:
+      - path: BoulderBook
+    info:
+      path: BoulderBook/Info.plist
+      properties:
+        CFBundleDisplayName: BoulderBook
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSPhotoLibraryAddUsageDescription: "Сохранение экспортированных трасс в Фото"
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: ru.boulderbook.app
+        GENERATE_INFOPLIST_FILE: "NO"
+  BoulderBookTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: BoulderBookTests
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: "YES"
+    dependencies:
+      - target: BoulderBook
+schemes:
+  BoulderBook:
+    build:
+      targets:
+        BoulderBook: all
+        BoulderBookTests: [test]
+    run:
+      config: Release
+    test:
+      config: Debug
+      targets:
+        - BoulderBookTests

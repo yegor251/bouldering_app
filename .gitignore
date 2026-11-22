@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Датасеты и артефакты обучения (гигабайты, качаются скриптом).
+# Якорь к корню: без него `data/` регистронезависимо ловит
+# .../Data/... внутри best.mlpackage и теряет веса модели.
+/data/
+/models/
+/runs/
+/*.pt
+
+# Логи
+*.log
+nohup.out
+
+# Xcode / iOS
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+*.ipa
+*.dSYM.zip

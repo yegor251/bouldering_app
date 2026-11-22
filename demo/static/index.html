@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Route demo — holds segmentation</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font: 14px/1.5 system-ui, -apple-system, sans-serif;
+    background: #14161a; color: #e8e8ea; display: flex; height: 100vh;
+  }
+  #side {
+    width: 300px; flex: none; padding: 16px; background: #1b1e24;
+    display: flex; flex-direction: column; gap: 12px; overflow-y: auto;
+  }
+  #side h1 { font-size: 15px; margin: 0; }
+  #side .hint { color: #9aa0ab; font-size: 12.5px; }
+  #main { flex: 1; display: flex; align-items: center; justify-content: center; overflow: auto; }
+  canvas { max-width: 100%; max-height: 100%; cursor: crosshair; border-radius: 6px; }
+  .drop {
+    border: 1px dashed #3a3f4a; border-radius: 8px; padding: 32px 16px;
+    text-align: center; color: #9aa0ab;
+  }
+  .btn {
+    background: #2c6e49; border: none; color: #fff; padding: 8px 12px;
+    border-radius: 6px; cursor: pointer; font-size: 13px;
+  }
+  .btn:disabled { background: #333a42; color: #7b818b; cursor: default; }
+  .btn.secondary { background: #333a42; }
+  input[type=range] { width: 100%; }
+  #status { font-size: 12.5px; color: #9aa0ab; min-height: 18px; }
+  #stats { font-size: 12.5px; }
+  .row { display: flex; gap: 8px; align-items: center; }
+  label { font-size: 12.5px; color: #b6bcc7; }
+</style>
+</head>
+<body>
+<div id="side">
+  <h1>🧗 Route demo</h1>
+  <div class="hint">
+    1. Загрузите фото стены · 2. Тапните по зацепке трассы — цвет подхватится автоматически ·
+    3. Клик по зацепке добавляет/убирает её
+  </div>
+  <input type="file" id="file" accept="image/*">
+  <div class="row">
+    <label>ΔE порог: <span id="de-val">30</span></label>
+    <input type="range" id="de" min="5" max="60" value="30">
+  </div>
+  <div class="row">
+    <button class="btn" id="export" disabled>Скачать PNG без фона</button>
+    <button class="btn secondary" id="reset">Сброс</button>
+  </div>
+  <div id="status"></div>
+  <div id="stats"></div>
+  <div class="drop" id="drop">…или перетащите фото сюда</div>
+</div>
+<div id="main"><canvas id="canvas" width="0" height="0"></canvas></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const canvas = $('canvas'), ctx = canvas.getContext('2d');
+let state = {
+  imageId: null, img: null, scale: 1,
+  holds: [], selected: new Set(), reference: null,
+};
+
+function setStatus(t) { $('status').textContent = t; }
+function setStats(holds, selected) {
+  $('stats').textContent = holds == null ? '' :
+    `Зацепок найдено: ${holds} · выбрано: ${selected}`;
+}
+
+async function post(url, body) {
+  const r = await fetch(url, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(body),
+  });
+  return r.json();
+}
+
+function draw() {
+  if (!state.img) return;
+  canvas.width = state.img.width;
+  canvas.height = state.img.height;
+  ctx.drawImage(state.img, 0, 0);
+  // all detected holds: faint outline + id
+  ctx.lineWidth = 1;
+  ctx.strokeStyle = 'rgba(255,255,255,0.25)';
+  for (const h of state.holds) {
+    trace(h.polygon); ctx.stroke();
+  }
+  // selected: bright fill outline
+  ctx.lineWidth = 2.5;
+  ctx.strokeStyle = '#3cd67a';
+  ctx.fillStyle = 'rgba(60,214,122,0.28)';
+  for (const h of state.holds) {
+    if (!state.selected.has(h.id)) continue;
+    trace(h.polygon); ctx.fill(); ctx.stroke();
+  }
+}
+
+function trace(poly) {
+  ctx.beginPath();
+  ctx.moveTo(poly[0][0], poly[0][1]);
+  for (let i = 1; i < poly.length; i++) ctx.lineTo(poly[i][0], poly[i][1]);
+  ctx.closePath();
+}
+
+async function analyze(file) {
+  setStatus('Анализирую… (инференс на MPS, секунды)');
+  const fd = new FormData();
+  fd.append('file', file);
+  const r = await fetch('/api/analyze', {method: 'POST', body: fd});
+  if (!r.ok) { setStatus('Ошибка загрузки'); return; }
+  const d = await r.json();
+  state.imageId = d.image_id;
+  state.holds = d.holds;
+  state.selected = new Set();
+  state.reference = null;
+  const img = new Image();
+  img.onload = () => { state.img = img; draw(); };
+  img.src = d.image;
+  setStats(d.holds.length, 0);
+  setStatus(`Готово. Тапните по зацепке трассы.`);
+  $('export').disabled = true;
+}
+
+canvas.addEventListener('click', async e => {
+  if (!state.imageId) return;
+  const rect = canvas.getBoundingClientRect();
+  const x = (e.clientX - rect.left) * (canvas.width / rect.width);
+  const y = (e.clientY - rect.top) * (canvas.height / rect.height);
+  const hit = state.holds.find(h => pointInPoly(x, y, h.polygon));
+  if (state.reference == null || !hit) {
+    const d = await post('/api/select', {
+      image_id: state.imageId, x, y, max_de: +$('de').value,
+    });
+    if (!d.ok) { setStatus('Тут нет зацепки — тапните по ней'); return; }
+    state.selected = new Set(d.selected);
+    state.reference = d.reference;
+    setStatus(`Эталон: зацепка #${d.reference}`);
+  } else if (hit) {
+    const d = await post('/api/toggle', {image_id: state.imageId, hold_id: hit.id});
+    if (!d.ok) return;
+    state.selected = new Set(d.selected);
+  }
+  draw();
+  setStats(state.holds.length, state.selected.size);
+  $('export').disabled = state.selected.size === 0;
+});
+
+function pointInPoly(x, y, poly) {
+  let inside = false;
+  for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+    const [xi, yi] = poly[i], [xj, yj] = poly[j];
+    if ((yi > y) !== (yj > y) && x < (xj - xi) * (y - yi) / (yj - yi) + xi) inside = !inside;
+  }
+  return inside;
+}
+
+$('de').addEventListener('input', () => $('de-val').textContent = $('de').value);
+$('de').addEventListener('change', async () => {
+  if (!state.imageId || state.reference == null) return;
+  const d = await post('/api/reselect', {
+    image_id: state.imageId, max_de: +$('de').value,
+  });
+  if (!d.ok) return;
+  state.selected = new Set(d.selected);
+  draw();
+  setStats(state.holds.length, state.selected.size);
+  $('export').disabled = state.selected.size === 0;
+});
+
+$('file').addEventListener('change', e => e.target.files[0] && analyze(e.target.files[0]));
+document.addEventListener('dragover', e => e.preventDefault());
+document.addEventListener('drop', e => {
+  e.preventDefault();
+  const f = e.dataTransfer.files[0];
+  if (f && f.type.startsWith('image/')) analyze(f);
+});
+$('reset').addEventListener('click', () => {
+  state = {imageId: null, img: null, scale: 1, holds: [], selected: new Set(), reference: null};
+  canvas.width = canvas.height = 0;
+  setStats(null, 0); setStatus(''); $('export').disabled = true;
+});
+$('export').addEventListener('click', () => {
+  window.open(`/api/export/${state.imageId}`, '_blank');
+});
+</script>
+</body>
+</html>
